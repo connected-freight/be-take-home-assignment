@@ -2,6 +2,8 @@
 
 ## Objectives
 The assessment objectives of this question are as follows:
+- Follows best practices.
+- Code readability.
 - Appropriate code structure.
 - Appropriate naming of parameters, functions, types, classes, and fields.
 - Appropriate use of OOP concepts.
@@ -15,7 +17,7 @@ We will need to validate the following, and throw as JS `Error` instances if any
 1. The `name` field is not null and is not an empty string.
 2. Either `phoneNumber` or `emailAddress` must be specified. Both can be specified as well.
 3. If specified, the `phoneNumber` string must be exactly 10 characters, and can only contain numeric characters.
-4. If specified, the `emailAddress` string must be a valid email address format.
+4. If specified, the `emailAddress` string must be in a valid email address format.
 5. The `dateOfBirth` string must be specified, must be in the ISO 8601 date format (`YYYY-MM-DD`), and must not be in the future.
 
 ### Mapping
@@ -25,7 +27,7 @@ The output fields should be mapped as follows:
 - `phoneNumber`: Phone number of the user
 - `emailAddress`: Email address of the user
 - `dateOfBirth`: Date of birth of the user as a JS `Date` instance
-- `age`: The current age of the user (Preferably via a getter)
+- `ageToday`: The current age of the user (Preferably via a getter)
 
 ### Additional Instructions
 - You may use any additional NPM packages as you deem fit, but you may not use any external API calls.
