@@ -1,6 +1,7 @@
 import { getCourseScoreMetrics } from '..';
 import { CourseScores } from '../models/input';
 import { CourseScoreMetrics } from '../models/output';
+import { generateCourseScores } from '../test-helpers/course-input-generator';
 
 describe('Question 2', () => {
   it('Should calculate course score metrics from raw course scores', () => {
@@ -70,5 +71,17 @@ describe('Question 2', () => {
     const result = getCourseScoreMetrics(input);
 
     expect(result).toEqual(expectedOutput);
+  });
+
+  it('Should handle large inputs', () => {
+    const largeInput = generateCourseScores('Large course', 1000, 1000);
+    const startTimestampInMs = performance.now();
+    getCourseScoreMetrics(largeInput);
+    const endTimestampInMs = performance.now();
+    console.log(
+      `getCourseScoreMetrics with a 1000*1000 dataset took ${
+        (endTimestampInMs - startTimestampInMs) / 1000
+      } seconds.`
+    );
   });
 });
