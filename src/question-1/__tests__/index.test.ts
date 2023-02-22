@@ -23,10 +23,10 @@ describe('Question 1', () => {
       name: 'John Doe',
       phoneNumber: '1234567890',
       emailAddress: 'john@example.com',
-      dateOfBirth: '1990-02-21',
+      dateOfBirth: '1990-01-01',
     });
 
-    expect(result.ageToday).toEqual(32);
+    expect(result.ageToday).toEqual(33);
   });
 
   it('Should map emailAddress to id if only emailAddress is available', () => {
